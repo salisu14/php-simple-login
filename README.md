@@ -1,2 +1,2 @@
 # php-simple-login
-PHP Simple Login Form using PDO and password_has
+PHP Simple Login Form using PDO and password_hash
