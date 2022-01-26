@@ -1,6 +1,6 @@
 <?php
-   require 'connection_db.php';
-   
+
+   require 'connection_db.php';   
 
    $first_name = filter_input(INPUT_POST, 'fname');
    $last_name = filter_input(INPUT_POST, 'sname');
@@ -9,6 +9,7 @@
 
    $password = password_hash($password, PASSWORD_BCRYPT);
 
+   //Before inserting into the database, there is need for validation of username field to uniquely register the prospective user.
 
    $query = "INSERT INTO registration(first_name, last_name, username, u_password)
              VALUES(:first_name, :last_name, :username, :u_password)";
